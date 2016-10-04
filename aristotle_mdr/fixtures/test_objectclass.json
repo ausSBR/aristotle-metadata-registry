@@ -1,0 +1,93 @@
+[
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 1,  
+    "fields": {
+      "definition": "A human being, whether man, woman or child. ",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 1,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 2,  
+    "fields": {
+      "definition": "An organized group of people with a particular purpose, such as a business or government department.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 2,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 3,  
+    "fields": {
+      "definition": "A collection of information used for describing the location of an entity and/or details describing how the entity can be contacted.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Address"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 3,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 4,  
+    "fields": {
+      "definition": "A person that is authorised to represent an entity.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Authorised Contact"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 4,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 5,  
+    "fields": {
+      "definition": "A person or organisation that is somehow associated to another entity.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Associated Entity"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 5,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 6,  
+    "fields": {
+      "definition": "An electronic mechanism that allow entities to be contacted.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Electronic Contact"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 6,
+    "fields": {}
+  }   
+  
+]

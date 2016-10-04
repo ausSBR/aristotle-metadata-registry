@@ -1,0 +1,956 @@
+[
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 200,  
+    "fields": {
+      "definition": "The end of a persons life.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Birth Event"
+    }
+  },
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 200,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 102
+    }
+  },   
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 201,  
+    "fields": {
+      "definition": "A unique identifier for digitally identifying an organisation.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Digital Identification Number"
+    }
+  },
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 201,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 116
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 202,  
+    "fields": {
+      "definition": "Capital expenditure is the expenditure by an entity of a significant amount for the purchase or improvement of a fixed asset; the amount expended would warrant the item being amortised over an estimated useful life of a reasonably extended period.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Capital Expenditure"
+    }
+  },
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 202,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 110
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 203,  
+    "fields": {
+      "definition": "Gains provenient from  change of price of goods or products.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Revaluation Gains"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 203,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 149
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 204,  
+    "fields": {
+      "definition": "The nature of the association between entities that are associated.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Entity Association Type"
+    }
+  },    
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 204,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 120
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 205,  
+    "fields": {
+      "definition": "The reference tothe entity that is associated to an Organisation.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Associated Entity Reference"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 205,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 101
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 206,  
+    "fields": {
+      "definition": "The name by which an Organisation is registered.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Legal Name"
+    }
+  },     
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 206,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 127
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 207,  
+    "fields": {
+      "definition": "The name of a branch within an organisation.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Branch Name"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 207,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 106
+    }
+  },   
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 208,  
+    "fields": {
+      "definition": "The business structure within which an Organisation operates.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Business Structure"
+    }
+  },    
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 208,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 109
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 209,  
+    "fields": {
+      "definition": "The main activity that constitutes the main source of income for an organisation.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Main Income Activity"
+    }
+  },     
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 209,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 135
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 210,  
+    "fields": {
+      "definition": "A unique identifier for digitally identifying a person.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Digital Identification Number"
+    }
+  },     
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 210,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 116
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 211,  
+    "fields": {
+      "definition": "The first name given to a person by their parents.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Given Name"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 211,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 124
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 212,  
+    "fields": {
+      "definition": "The name inherited by a person and all members of their family.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Family Name"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 212,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 121
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 213,  
+    "fields": {
+      "definition": "Other names that were given to a person by their parents.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Middle Name"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 213,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 136
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 214,  
+    "fields": {
+      "definition": "A field to capture the full name of a person.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Full Name"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 214,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 122
+    }
+  },      
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 215,  
+    "fields": {
+      "definition": "The title associated to a person which are affixed at the beginning of the person\\'s name.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Name Prefix"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 215,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 139
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 216,  
+    "fields": {
+      "definition": "The titles associated to a person which are affixed at the end of the person\\'s name.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Name Suffix"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 216,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 139
+    }
+  },   
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 217,  
+    "fields": {
+      "definition": "The name of a person nominated as authorised contact.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Authorised Contact-Contact Name"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 217,
+    "fields": {
+      "objectClass" : 4,
+      "property"    : 113
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 218,  
+    "fields": {
+      "definition": "The title of the post (of employment or otherwise)  occupied by a person who has been used for contacting an entity or organisation.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Authorised Contact-Position Title"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 218,
+    "fields": {
+      "objectClass" : 4,
+      "property"    : 141
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 219,  
+    "fields": {
+      "definition": "The country where the telephone of a organisation.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Electronic Contact-Telephone Country"
+    }
+  },     
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 219,
+    "fields": {
+      "objectClass" : 6,
+      "property"    : 155
+    }
+  },      
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 220,  
+    "fields": {
+      "definition": "The area code of a telephone of a person nominated as authorised contact.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Electronic Contact-Telephone Area"
+    }
+  },    
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 220,
+    "fields": {
+      "objectClass" : 6,
+      "property"    : 154
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 221,  
+    "fields": {
+      "definition": "The number that is used to reach the telephone of a person nominated as authorised contact.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Electronic Contact-Telephone Designation"
+    }
+  },    
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 221,
+    "fields": {
+      "objectClass" : 6,
+      "property"    : 156
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 222,  
+    "fields": {
+      "definition": "The kind of physical line used by a telephone used by a person nominated as authorised contact.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Electronic Contact-Telephone Line Type"
+    }
+  },    
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 222,
+    "fields": {
+      "objectClass" : 6,
+      "property"    : 157
+    }
+  },      
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 223,  
+    "fields": {
+      "definition": "The nature of the service provided by a telephone service used by a person nominated as authorised contact.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Electronic Contact-Telephone Service Type"
+    }
+  },     
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 223,
+    "fields": {
+      "objectClass" : 6,
+      "property"    : 158
+    }
+  },   
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 224,  
+    "fields": {
+      "definition": "The name by which an associated entity (organisation or person) is known.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Associated Entity-Name"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 224,
+    "fields": {
+      "objectClass" : 5,
+      "property"    : 137
+    }
+  },   
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 225,  
+    "fields": {
+      "definition": "A unique identifier for digitally identifying an entity (organisation or person) who has associations to another entity.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Associated Entity-Digital Identification Number"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 225,
+    "fields": {
+      "objectClass" : 5,
+      "property"    : 116
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 226,  
+    "fields": {
+      "definition": "The name of a document  that can be used for identifying an organisation.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Identifier Name"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 226,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 125
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 227,  
+    "fields": {
+      "definition": "The designation value of a identifier used to identifier an organisation.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Identifier Value"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 227,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 126
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 228,  
+    "fields": {
+      "definition": "Determines the type of use of an address by an Organisation.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Address Usage Type"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 228,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 100
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 229,  
+    "fields": {
+      "definition": "The first line within a un-structured address.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Address-Line 1"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 229,
+    "fields": {
+      "objectClass" : 3,
+      "property"    : 129
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 230,  
+    "fields": {
+      "definition": "The second line within a un-structured address.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Address-Line 2"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 230,
+    "fields": {
+      "objectClass" : 3,
+      "property"    : 130
+    }
+  },   
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 231,  
+    "fields": {
+      "definition": "A word or a combination of words by which a street is designated or known",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Address-Street Name"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 231,
+    "fields": {
+      "objectClass" : 3,
+      "property"    : 153
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 232,  
+    "fields": {
+      "definition": "The locality (City/Town/Suburb) component of an address.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Address-Locality"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 232,
+    "fields": {
+      "objectClass" : 3,
+      "property"    : 134
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 233,  
+    "fields": {
+      "definition": "The region within a Country that determines where an address is.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Address-State or Territory"
+    }
+  },
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 233,
+    "fields": {
+      "objectClass" : 3,
+      "property"    : 152
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 234,  
+    "fields": {
+      "definition": "The numeric descriptor for a postal delivery area, aligned with locality, suburb or place that determines the location of an address.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Address-Postal Code"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 234,
+    "fields": {
+      "objectClass" : 3,
+      "property"    : 142
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 235,  
+    "fields": {
+      "definition": "The country component of an address.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Address-Country Designation"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 235,
+    "fields": {
+      "objectClass" : 3,
+      "property"    : 114
+    }
+  },   
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 236,  
+    "fields": {
+      "definition": "The name of a document  that can be used for identifying a person.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Identifier Name"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 236,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 125
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 237,  
+    "fields": {
+      "definition": "The designation value of a identifier used to identifier a person.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Identifier Value"
+    }
+  }, 
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 237,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 126
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 58,  
+    "fields": {
+      "definition": "The name elected as preferred by a person",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Preferred Name"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 237,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 143
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 239,  
+    "fields": {
+      "definition": "The record of the locality where the birth of a person takes place.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Birth Locality"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 239,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 104
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 240,  
+    "fields": {
+      "definition": "The country where a  person is a citizen, with its rights and duties",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Citizenship Country"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 240,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 111
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 241,  
+    "fields": {
+      "definition": "The sexual identity of a person.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Gender"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 241,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 123
+    }
+  },      
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 242,  
+    "fields": {
+      "definition": "The primary language to be used for addressing a Person.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Primary Language"
+    }
+  }, 
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 242,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 146
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 243,  
+    "fields": {
+      "definition": "The secondary language to be used for addressing a Person.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Secondary Language"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 243,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 151
+    }
+  },       
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 244,  
+    "fields": {
+      "definition": "The end of a person\\'s life.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Death Event"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 244,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 115
+    }
+  },   
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 245,  
+    "fields": {
+      "definition": "The record of the country where the birth of a person takes place.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Person-Birth Country"
+    }
+  },     
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 245,
+    "fields": {
+      "objectClass" : 1,
+      "property"    : 103
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 246,  
+    "fields": {
+      "definition": "The address of an electronic mailbox associated to a Person",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Electronic Contact-Email Address"
+    }
+  },     
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 246,
+    "fields": {
+      "objectClass" : 6,
+      "property"    : 119
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 247,  
+    "fields": {
+      "definition": "The primary method to be used in an electronic contact.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Electronic Contact-Primary Contact Method"
+    }
+  },      
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 247,
+    "fields": {
+      "objectClass" : 6,
+      "property"    : 144
+    }
+  },     
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 248,  
+    "fields": {
+      "definition": "A business name, also known as a trading name, is simply a name or title under which an organisation trades.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Business Name"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 248,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 107
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 249,  
+    "fields": {
+      "definition": "The kind of end point address of an organisation, for the delivery of digital services.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Digital Service Address Type"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 249,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 117
+    }
+  },   
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 250,  
+    "fields": {
+      "definition": "The end point address of an organisation, for the delivery of digital services.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Organisation-Digital Service Address Value"
+    }
+  },   
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 250,
+    "fields": {
+      "objectClass" : 2,
+      "property"    : 118
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 251,  
+    "fields": {
+      "definition": "The address of an electronic mailbox that is primarily used by an entity when being contacted electronically.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Electronic Contact-Primary Email Address"
+    }
+  },  
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 251,
+    "fields": {
+      "objectClass" : 6,
+      "property"    : 145
+    }
+  },    
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 252,  
+    "fields": {
+      "definition": "The number that is primarily used to reach the telephone service or an entity when being contacted electronically.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Electronic Contact-Primary Telephone Designation"
+    }
+  },
+  {
+    "model": "aristotle_mdr.DataElementConcept",
+    "pk": 252,
+    "fields": {
+      "objectClass" : 6,
+      "property"    : 147
+    }
+  }   
+]
