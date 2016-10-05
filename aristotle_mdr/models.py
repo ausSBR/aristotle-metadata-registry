@@ -945,7 +945,15 @@ class ObjectClass(concept):
     class Meta:
         verbose_name_plural = "Object Classes"
 
+class RepresentationClass(concept):
+    """
+    Add as part of SBR meta model requirements
+    """
+    template = "aristotle_mdr/concepts/representationClass.html"
 
+    class Meta:
+        verbose_name_plural = "Representation Classes"
+        
 class Property(concept):
     """
     Quality common to all members of an :model:`aristotle_mdr.ObjectClass`

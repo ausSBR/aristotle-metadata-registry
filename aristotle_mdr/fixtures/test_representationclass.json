@@ -1,0 +1,348 @@
+[
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 300,  
+    "fields": {
+      "definition": "A number that represents a monetary amount, measured in a given currency with a given precision.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Amount"
+    }
+  },
+  {
+    "model": "aristotle_mdr.RepresentationClass",
+    "pk": 300,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 301,  
+    "fields": {
+      "definition": "An alphanumeric value obtained from scanning a series of vertical lines",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Barcode"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 301,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 302,  
+    "fields": {
+      "definition": "A string of alphanumeric characters of any length with an assigned meaning.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Code"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 302,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 303,  
+    "fields": {
+      "definition": "An integer numeric value that represent the total sum of something.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Count"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 303,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 304,  
+    "fields": {
+      "definition": "A string of numeric characters comprised of a valid date and time.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "DateTime"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 304,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 305,  
+    "fields": {
+      "definition": "A string of numeric characters comprised of a valid day and month.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Day And Month"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 305,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 306,  
+    "fields": {
+      "definition": "A string of characters that represent a day of a month, ranging from 1 to 31.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Day Of Month"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 306,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 307,  
+    "fields": {
+      "definition": "A string of characters that representa a day of the week.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Day Of Week"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 307,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 308,  
+    "fields": {
+      "definition": "A string of alphanumeric characters having relatively unstructured content.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Description"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 308,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 309,  
+    "fields": {
+      "definition": "A numeric value which is not a whole number, represented by a decimal fraction (a fraction with 10 as the denominator, expressed in figures after a decimal point).",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Fraction"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 309,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 310,  
+    "fields": {
+      "definition": "A string of numeric characters comprised of a valid day, month and year.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Full Date"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 310,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 311,  
+    "fields": {
+      "definition": "A string that uniquely identifies something.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Identifier"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 311,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 312,  
+    "fields": {
+      "definition": "An image is a displayable binary object generated with still or digital image manipulation software.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Image"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 312,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 313,  
+    "fields": {
+      "definition": "An alpha character code used to define the status of a particular item or group of items.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Indicator"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 313,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 314,  
+    "fields": {
+      "definition": "A string of characters that representa a month of the year.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Month"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 314,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 315,  
+    "fields": {
+      "definition": "A numeric value which is a single instance.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Number"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 315,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 316,  
+    "fields": {
+      "definition": "A numeric value which represents hundredth parts of a whole.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Percent"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 316,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 317,  
+    "fields": {
+      "definition": "A number that represents a certain quantity or amount of one thing considered in relation to a unit of another thing.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Rate"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 317,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 318,  
+    "fields": {
+      "definition": "A block of text treated as a whole.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Text"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 318,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 319,  
+    "fields": {
+      "definition": "The number that represents a measure of time",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Time"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 319,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 320,  
+    "fields": {
+      "definition": "An integer value made of four digits that represent a year in a 360-day calendar.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Year"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 320,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 321,  
+    "fields": {
+      "definition": "A string of numeric characters comprised of a valid month and year.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "Year And Month"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 321,
+    "fields": {}
+  },
+  {
+    "model": "aristotle_mdr._concept",
+    "pk": 322,  
+    "fields": {
+      "definition": "The Uniform Resource Locator is a text that provides  a reference (an address) to a resource on the Internet.",
+      "created": "2016-10-02T22:23:10.208Z",
+      "modified": "2016-10-02T22:23:10.209Z",
+      "name": "URL"
+    }
+  },
+  {
+    "model": "aristotle_mdr.ObjectClass",
+    "pk": 322,
+    "fields": {}
+  }                                                
+  
+]

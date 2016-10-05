@@ -247,6 +247,7 @@ admin.site.register(User, AristotleUserAdmin)
 
 
 register_concept(MDR.ObjectClass)
+register_concept(MDR.RepresentationClass)
 register_concept(MDR.Property)
 register_concept(
     MDR.ValueDomain,
