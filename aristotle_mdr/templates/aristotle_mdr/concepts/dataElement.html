@@ -6,6 +6,7 @@
 
 {% block objSpecific %}
 <h2>Components</h2>
+
 {% if view == "technical" %}
 
     <h3 >Data Element Concept -
@@ -62,6 +63,12 @@
                 <span class="panel-body name">{% include "aristotle_mdr/helpers/itemLink.html" with item=item.valueDomain %}</span>
                 </header>
             </li>
+          <li style="width:40%;">
+                <header class="panel panel-info">
+                <div class="panel-heading arrow">Representation Class</div>
+                <span class="panel-body name">{% include "aristotle_mdr/helpers/itemLink.html" with item=item.representationClass %}</span>
+                </header>
+          </li>
         </ul>
     </section>
 

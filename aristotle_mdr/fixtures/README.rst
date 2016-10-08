@@ -18,6 +18,7 @@ Load Test Data Example
 sudo ./manage.py loaddata aristotle_mdr/fixtures/test_objectclass.json
 sudo ./manage.py loaddata aristotle_mdr/fixtures/test_property.json
 sudo ./manage.py loaddata aristotle_mdr/fixtures/test_dataelementconcept.json
+sudo ./manage.py loaddata aristotle_mdr/fixtures/test_representationclass.json
 
 
 * dont forget to reset the nextvalue id in the database for concept
@@ -28,4 +29,5 @@ Dump Data
  
 Update Index
 -------------
- sudo ./manage.py update_index
+sudo ./manage.py update_index
+sudo chown -R rick:rick whoosh_index/

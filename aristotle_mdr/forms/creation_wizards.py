@@ -318,7 +318,7 @@ class DE_OCPVD_Results(DEC_OCP_Results):
             # The user chose to make their own item, so return No item.
             return None
         try:
-            return MDR.ValueDomain.objects.get(pk=self.cleaned_data['vd_options'])
+            return MDR.RepresentationClass.objects.get(pk=self.cleaned_data['vd_options'])
         except ObjectDoesNotExist:
             return None
 

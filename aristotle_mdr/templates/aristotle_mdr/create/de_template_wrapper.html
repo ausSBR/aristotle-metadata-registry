@@ -1,5 +1,7 @@
 {% extends "aristotle_mdr/base.html" %}
 {% load compile_static i18n %}
+{% load staticfiles %}
+
 
 {% block title %}
 Create Data Element - Step {{ wizard.steps.step1 }}: {{step_title}}
@@ -9,6 +11,8 @@ Create Data Element - Step {{ wizard.steps.step1 }}: {{step_title}}
     <link rel="stylesheet" href="{{ STATIC_URL }}{% compile 'aristotle_mdr/aristotle.wizard.less' %}" />
     <link rel="stylesheet" href="{{ STATIC_URL }}{% compile 'aristotle_mdr/aristotle_search.less' %}" />
     {% include 'autocomplete_light/static.html' %}
+
+    <script src="{% static 'aristotle_mdr/aristotle.de.js' %}" type="text/javascript"></script
 {% endblock %}
 
 {% block head %}

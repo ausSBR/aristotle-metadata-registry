@@ -25,7 +25,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 301,
     "fields": {}
   },
@@ -40,7 +40,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 302,
     "fields": {}
   },
@@ -55,7 +55,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 303,
     "fields": {}
   },
@@ -70,7 +70,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 304,
     "fields": {}
   },
@@ -85,7 +85,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 305,
     "fields": {}
   },
@@ -100,7 +100,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 306,
     "fields": {}
   },
@@ -115,7 +115,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 307,
     "fields": {}
   },
@@ -130,7 +130,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 308,
     "fields": {}
   },
@@ -145,7 +145,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 309,
     "fields": {}
   },
@@ -160,7 +160,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 310,
     "fields": {}
   },
@@ -175,7 +175,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 311,
     "fields": {}
   },
@@ -190,7 +190,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 312,
     "fields": {}
   },
@@ -205,7 +205,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 313,
     "fields": {}
   },
@@ -220,7 +220,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 314,
     "fields": {}
   },
@@ -235,7 +235,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 315,
     "fields": {}
   },
@@ -250,7 +250,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 316,
     "fields": {}
   },
@@ -265,7 +265,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 317,
     "fields": {}
   },
@@ -280,7 +280,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 318,
     "fields": {}
   },
@@ -295,7 +295,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 319,
     "fields": {}
   },
@@ -310,7 +310,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 320,
     "fields": {}
   },
@@ -325,7 +325,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 321,
     "fields": {}
   },
@@ -340,7 +340,7 @@
     }
   },
   {
-    "model": "aristotle_mdr.ObjectClass",
+    "model": "aristotle_mdr.RepresentationClass",
     "pk": 322,
     "fields": {}
   }                                                

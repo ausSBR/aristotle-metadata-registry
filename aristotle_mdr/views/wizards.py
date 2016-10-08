@@ -517,7 +517,7 @@ class DataElementWizard(MultiStepAristotleWizard):
         ("find_de_from_comp", MDRForms.wizards.DE_Find_DE_Results_from_components),
         ("find_dec_results", MDRForms.wizards.DE_Find_DEC_Results),
         ("make_dec", MDRForms.wizards.subclassed_wizard_2_Results(MDR.DataElementConcept)),
-        ("make_vd", MDRForms.wizards.subclassed_wizard_2_Results(MDR.ValueDomain)),
+        ("make_vd", MDRForms.wizards.subclassed_wizard_2_Results(MDR.RepresentationClass)),
         ("find_de_results", MDRForms.wizards.DE_Find_DE_Results),
         ("completed", MDRForms.wizards.DE_Complete),
     ]
@@ -564,7 +564,7 @@ class DataElementWizard(MultiStepAristotleWizard):
             self._data_element_from_components = MDR.DataElement.objects.filter(
                 dataElementConcept__objectClass=oc,
                 dataElementConcept__property=pr,
-                valueDomain=vd
+                representationClass=vd
                 ).visible(self.request.user)
 
             return self._data_element_from_components
@@ -592,7 +592,7 @@ class DataElementWizard(MultiStepAristotleWizard):
             dec = results.get('dec_options', None)
         vd = self.get_value_domain()
         if dec and vd:
-            self._data_elements = MDR.DataElement.objects.filter(dataElementConcept=dec, valueDomain=vd).visible(self.request.user)
+            self._data_elements = MDR.DataElement.objects.filter(dataElementConcept=dec, representationClass=vd).visible(self.request.user)
             return self._data_elements
         else:
             return []
@@ -618,7 +618,7 @@ class DataElementWizard(MultiStepAristotleWizard):
                         definition=ocp.get('pr_desc', "")
                     ),
                     'vd_similar': self.find_similar(
-                        model=MDR.ValueDomain,
+                        model=MDR.RepresentationClass,
                         name=ocp.get('vd_name', ""),
                         definition=ocp.get('vd_desc', "")
                     )
@@ -671,7 +671,7 @@ class DataElementWizard(MultiStepAristotleWizard):
             },
             'make_vd': {
                 'percent_complete': 80,
-                'step_title': _('Create Value Domain')
+                'step_title': _('Create Representation Class')
             },
             'find_de_results': {'percent_complete': 90, 'step_title': _('Review Data Element')},
             'completed': {
@@ -683,7 +683,7 @@ class DataElementWizard(MultiStepAristotleWizard):
 
         if self.steps.current == 'make_vd':
             context.update({
-                'model_name': MDR.ValueDomain._meta.verbose_name,
+                'model_name': MDR.RepresentationClass._meta.verbose_name,
                 'help_guide': self.help_guide(MDR.Property),
                 })
         if self.steps.current == 'find_dec_results':
@@ -732,11 +732,11 @@ class DataElementWizard(MultiStepAristotleWizard):
                 vd_name = self.get_value_domain().name
                 vd_desc = self.get_value_domain().definition
             elif made_vd:
-                vd_name = made_vd.get('name', _("No value domain name found"))
-                vd_desc = made_vd.get('definition', _("No value domain definition found"))
+                vd_name = made_vd.get('name', _("No representation class name found"))
+                vd_desc = made_vd.get('definition', _("No representation class definition found"))
             else:
-                vd_name = _("No value domain name found")
-                vd_desc = _("No value domain definition found")
+                vd_name = _("No representation class name found")
+                vd_desc = _("No representation class definition found")
             vd_desc = make_it_clean(vd_desc)
             if vd_desc:
                 # lower case the first letter as this will be the latter part of a sentence
@@ -810,11 +810,11 @@ class DataElementWizard(MultiStepAristotleWizard):
                         name=saved_item.name, id=saved_item.id
                     ))
                 )
-            if type(saved_item) == MDR.ValueDomain:
+            if type(saved_item) == MDR.RepresentationClass:
                 vd = saved_item
                 messages.success(
                     self.request,
-                    mark_safe(_("New ValueDomain '{name}' Saved - <a href='{url}'>id:{id}</a>").format(
+                    mark_safe(_("New Representation Class '{name}' Saved - <a href='{url}'>id:{id}</a>").format(
                         url=url_slugify_concept(saved_item),
                         name=saved_item.name, id=saved_item.id
                     ))
@@ -834,6 +834,6 @@ class DataElementWizard(MultiStepAristotleWizard):
             dec.save()
         if de is not None:
             de.dataElementConcept = dec
-            de.valueDomain = vd
+            de.representationClass = vd
             de.save()
         return HttpResponseRedirect(url_slugify_concept(de))

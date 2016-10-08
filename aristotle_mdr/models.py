@@ -1177,11 +1177,17 @@ class DataElement(concept):
         null=True
     )
 
+    representationClass = models.ForeignKey(
+        RepresentationClass,
+        verbose_name="Representation Class",
+        blank=True,
+        null=True
+    )
     @property
     def registry_cascade_items(self):
         out = []
-        if self.valueDomain:
-            out.append(self.valueDomain)
+        if self.representationClass:
+            out.append(self.representationClass)
         if self.dataElementConcept:
             out.append(self.dataElementConcept)
             out += self.dataElementConcept.registry_cascade_items
@@ -1193,6 +1199,7 @@ class DataElement(concept):
             (Property, Property.objects.filter(dataelementconcept=self.dataElementConcept)),
             (DataElementConcept, DataElementConcept.objects.filter(dataelement=self)),
             (ValueDomain, ValueDomain.objects.filter(dataelement=self)),
+            (RepresentationClass, RepresentationClass.objects.filter(dataelement=self)),
         ]
 
 
