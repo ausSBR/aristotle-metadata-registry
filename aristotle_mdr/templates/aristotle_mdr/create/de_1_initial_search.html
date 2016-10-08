@@ -83,12 +83,12 @@
 </fieldset>
 
 <fieldset class="wizard row">
-    <legend class="col-sm-4">How would you store this information?
-        <small class="example">For example: Number, code, text...</small>
+    <legend class="col-sm-4">How do you want to represent this information?
+        <small class="example">For example: Amount, Barcode, count...</small>
     </legend>
     <div class="col-sm-8">
         <label>
-            What would be the <em>name</em> of the value domain you are collecting?
+            What would be the <em>name</em> of the representation class you are collecting?
             {% if form.vd_name.errors %}
                 <div class="alert alert-danger">
                 {{ form.vd_name.errors }}
