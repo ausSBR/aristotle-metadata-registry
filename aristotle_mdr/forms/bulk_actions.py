@@ -215,7 +215,7 @@ class ChangeStateForm(ChangeStatusForm, BulkActionForm):
                 regDate = timezone.now().date()
             for item in items:
                 for ra in ras:
-                    r = ra.register(item, state, self.user, regDate, cascade, changeDetails)
+                    r = ra.register(item, state, self.user, regDate=regDate, cascade=cascade, changeDetails=changeDetails)
                     for f in r['failed']:
                         failed.append(f)
                     for s in r['success']:
@@ -223,14 +223,25 @@ class ChangeStateForm(ChangeStatusForm, BulkActionForm):
             failed = list(set(failed))
             success = list(set(success))
             bad_items = sorted([str(i.id) for i in failed])
-            message = _(
-                "%(num_items)s items registered in %(num_ra)s registration authorities. \n"
-                "Some items failed, they had the id's: %(bad_ids)s"
-            ) % {
-                'num_items': len(items),
-                'num_ra': len(ras),
-                'bad_ids': ",".join(bad_items)
-            }
+
+            if failed :
+                message = _(
+                    "%(num_items)s items registered in %(num_ra)s registration authorities. \n"
+                    "Some items failed, they had the id's: %(bad_ids)s"
+                ) % {
+                    'num_items': len(items),
+                    'num_ra': len(ras),
+                    'bad_ids': ",".join(bad_items)
+                }
+            else :
+                message = _(
+                    "%(num_items)s items registered in %(num_ra)s registration authorities. \n"
+                    "SUCCESS!!!!!"
+                ) % {
+                    'num_items': len(items),
+                    'num_ra': len(ras)
+                }
+
             reversion.revisions.set_comment(changeDetails + "\n\n" + message)
             return message
 

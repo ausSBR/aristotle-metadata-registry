@@ -300,6 +300,9 @@ class RegistrationAuthority(registryGroup):
             return {'success': [], 'failed': [item]}
 
         revision_message = kwargs.get('changeDetails', "")
+        if revision_message == "" :
+            revision_message = args.get('changeDetails', "")
+
         with transaction.atomic(), reversion.revisions.create_revision():
             reversion.revisions.set_user(user)
             reversion.revisions.set_comment(revision_message)
@@ -308,12 +311,32 @@ class RegistrationAuthority(registryGroup):
         return {'success': [item], 'failed': []}
 
     def _register(self, item, state, user, *args, **kwargs):
-        changeDetails = kwargs.get('changeDetails', "")
+
+        try :
+            changeDetails = kwargs.get('changeDetails', "")
+            if changeDetails == "" :
+                revision_message = args.get('changeDetails', "")
+        except :
+            changeDetails = "No Change Details Supplied."
         # If registrationDate is None (like from a form), override it with
         # todays date.
-        registrationDate = kwargs.get('registrationDate', None) \
-            or timezone.now().date()
-        until_date = kwargs.get('until_date', None)
+        try :
+            registrationDate = kwargs.get('regDate', "")
+            if registrationDate == "" :
+                registrationDate = args.get('regDate', "")
+            if registrationDate == "" :
+                registrationDate =  timezone.now().date()
+        except :
+            registrationDate = timezone.now().date()
+
+        try :
+            until_date = kwargs.get('until_date', "")
+            if until_date == "" :
+                until_date = args.get('until_date', "")
+            if until_date == "" :
+                until_date = registrationDate
+        except :
+            until_date = timezone.now().date()
 
         Status.objects.create(
             concept=item,
