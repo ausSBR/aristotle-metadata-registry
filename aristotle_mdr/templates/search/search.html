@@ -27,7 +27,7 @@
                     <input type="text" class="form-control" value="{% ternary form.q.value form.q.value "" %}" name="q" accesskey="q">
                     <span class="input-group-btn">
                     <button class="btn btn-primary" type="submit">
-                        {% trans "Search" %} {% bootstrap_icon "search" %}
+                        <i class="fa fa-search"></i> {% trans "Search" %} {% bootstrap_icon "search" %}
                     </button>
                     </span>
                 </div>
@@ -380,11 +380,11 @@
     {% elif form.errors %}
     {% else %}
         {# Show some example queries to run, maybe query syntax, something else? #}
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-10 col-md-offset-1 search-con">
         <p>
             Enter a query above to search the registry.
         </p>
-        <ul>
+        <ul class="list-order">
         <li> Selecting a registration authority will limit search results to items registered by that authority.
         </li>
         <li> Selecting a registation state will limit search results to items that are in that state.
@@ -396,6 +396,6 @@
         </p>
         </div>
     {% endif %}
-
+</div>
 {% bootstrap_modal 'search_concept_help' %}
 {% endblock %}

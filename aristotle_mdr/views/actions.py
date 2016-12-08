@@ -165,18 +165,29 @@ class ReviewAcceptView(ReviewActionMixin, FormView):
         kwargs = super(ReviewAcceptView, self).get_context_data(**kwargs)
         import json
         kwargs['status_matrix'] = json.dumps(generate_visibility_matrix(self.request.user))
+
+        forminstance = kwargs['form']
+        forminstance.fields['state'].initial = self.review.state
+        forminstance.fields['registrationAuthorities'].checked = [1]
+        # set registration authority
+
         return kwargs
 
     def post(self, request, *args, **kwargs):
         form = self.get_form()
-        review = self.get_review()
+
+       # review = self.get_review() SBR the concept objects are not inflated. We need to inflate this relationsship manually
+        review = MDR.ReviewRequest.objects.get(id=self.kwargs['review_id'])
+        theConcepts = review.concepts.all()
 
         if form.is_valid():
             review.reviewer = request.user
             review.response = form.cleaned_data['response']
             review.status = MDR.REVIEW_STATES.accepted
             review.save()
-            message = form.make_changes(items=review.concepts.all())
+            # here we go. We need all items .... SBR use the inflated concepts as part of making the changes
+            #message = form.make_changes(items=review.concepts.all())
+            message = form.make_changes(items=theConcepts)
             # message = _("Review accepted")
             messages.add_message(request, messages.INFO, message)
             return HttpResponseRedirect(reverse('aristotle_mdr:userReadyForReview'))

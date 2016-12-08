@@ -269,10 +269,13 @@ class RegistrationAuthority(registryGroup):
             ('public', public)
         )
 
-    def cascaded_register(self, item, state, user, *args, **kwargs):
+    def cascaded_register(self, item, state, user, **kwargs):
+
+        all_items = [item] + item.registry_cascade_items
+
         if not perms.user_can_change_status(user, item):
             # Return a failure as this item isn't allowed
-            return {'success': [], 'failed': [item] + item.registry_cascade_items}
+            return {'success': [], 'failed': all_items}
 
         revision_message = _(
             "Cascade registration of item '%(name)s' (id:%(iid)s)\n"
@@ -280,71 +283,64 @@ class RegistrationAuthority(registryGroup):
             'name': item.name,
             'iid': item.id
         }
-        revision_message = revision_message + kwargs.get('changeDetails', "")
+
+        if 'change_details' in kwargs:
+            revision_message += kwargs['change_details']
+
         seen_items = {'success': [], 'failed': []}
 
         with transaction.atomic(), reversion.revisions.create_revision():
             reversion.revisions.set_user(user)
             reversion.revisions.set_comment(revision_message)
 
-            for child_item in [item] + item.registry_cascade_items:
+            for child_item in all_items:
                 self._register(
-                    child_item, state, user, *args, **kwargs
+                    child_item, state, **kwargs
                 )
-                seen_items['success'] = seen_items['success'] + [child_item]
+                seen_items['success'] += [child_item]
         return seen_items
 
-    def register(self, item, state, user, *args, **kwargs):
+    def register(self, item, state, user, **kwargs):
         if not perms.user_can_change_status(user, item):
             # Return a failure as this item isn't allowed
             return {'success': [], 'failed': [item]}
 
-        revision_message = kwargs.get('changeDetails', "")
-        if revision_message == "" :
-            revision_message = args.get('changeDetails', "")
+        revision_message = _(
+            "Registration of item '%(name)s' (id:%(iid)s)\n"
+        ) % {
+            'name': item.name,
+            'iid': item.id
+        }
+
+        if 'change_details' in kwargs:
+            revision_message = kwargs['change_details']
 
         with transaction.atomic(), reversion.revisions.create_revision():
             reversion.revisions.set_user(user)
             reversion.revisions.set_comment(revision_message)
-            self._register(item, state, user, *args, **kwargs)
+            self._register(item, state, **kwargs)
 
         return {'success': [item], 'failed': []}
 
-    def _register(self, item, state, user, *args, **kwargs):
+    def _register(self, item, state, **kwargs):
+        if 'change_details' in kwargs:
+            change_details = kwargs['change_details']
+        else:
+            change_details = "No Change Details Supplied."
 
-        try :
-            changeDetails = kwargs.get('changeDetails', "")
-            if changeDetails == "" :
-                revision_message = args.get('changeDetails', "")
-        except :
-            changeDetails = "No Change Details Supplied."
         # If registrationDate is None (like from a form), override it with
-        # todays date.
-        try :
-            registrationDate = kwargs.get('regDate', "")
-            if registrationDate == "" :
-                registrationDate = args.get('regDate', "")
-            if registrationDate == "" :
-                registrationDate =  timezone.now().date()
-        except :
-            registrationDate = timezone.now().date()
-
-        try :
-            until_date = kwargs.get('until_date', "")
-            if until_date == "" :
-                until_date = args.get('until_date', "")
-            if until_date == "" :
-                until_date = registrationDate
-        except :
-            until_date = timezone.now().date()
+        # today's date.
+        if 'reg_date' in kwargs:
+            registration_date = kwargs['reg_date']
+        else:
+            registration_date = timezone.now().date()
 
         Status.objects.create(
             concept=item,
             registrationAuthority=self,
-            registrationDate=registrationDate,
+            registrationDate=registration_date,
             state=state,
-            changeDetails=changeDetails,
-            until_date=until_date
+            changeDetails=change_details
         )
 
     def giveRoleToUser(self, role, user):
@@ -767,13 +763,13 @@ class _concept(baseAristotleObject):
         if hasattr(when, 'date'):
             when = when.date()
         registered_before_now = Q(registrationDate__lte=when)
-        registation_still_valid = (
-            Q(until_date__gte=when) |
-            Q(until_date__isnull=True)
-        )
+        # registation_still_valid = (    /   Removed until_date from models
+        #     Q(until_date__gte=when) |
+        #     Q(until_date__isnull=True)
+        # )
 
         states = qs.filter(
-            registered_before_now & registation_still_valid
+            registered_before_now
         ).order_by("registrationAuthority", "-registrationDate", "-created")
 
         from django.db import connection
@@ -927,11 +923,11 @@ class Status(TimeStampedModel):
     # TODO: Below should be changed to 'effective_date' to match ISO IEC
     # 11179-6 (Section 8.1.2.6.2.2)
     registrationDate = models.DateField(_('Date registration effective'))
-    until_date = models.DateField(
-        _('Date registration expires'),
-        blank=True,
-        null=True
-    )
+    # until_date = models.DateField(    /   until_date removed from models
+    #     _('Date registration expires'),
+    #     blank=True,
+    #     null=True
+    # )
     tracker = FieldTracker()
 
     class Meta:
@@ -976,7 +972,8 @@ class RepresentationClass(concept):
 
     class Meta:
         verbose_name_plural = "Representation Classes"
-        
+
+
 class Property(concept):
     """
     Quality common to all members of an :model:`aristotle_mdr.ObjectClass`

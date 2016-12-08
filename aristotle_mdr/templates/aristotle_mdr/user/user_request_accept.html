@@ -11,7 +11,13 @@
           <li><a href="{% url 'aristotle:userReadyForReview' %}">Review list</a></li>
           <li class="active">Approve review request</li>
         </ol>
-
+        <div class="alert alert-info">
+            Status:
+            {{review.get_status_display}}
+            <p>Request user   :
+            {{review.requester}}
+            </p>
+        </div>
 
         <header>By approving this review, this form allows you to change the status of multiple items in your registration authorities.
         </header>
@@ -42,7 +48,7 @@
                 <label for="id_registrationDate">{{ form.registrationDate.label }}</label>:
                 {{ form.registrationDate.errors }}
             </span>
-            <span class="pull-right">
+            <span class="pull-right" style="background:red;width:150px;float:right;">
                 {{ form.registrationDate }}
             </span>
         </div>
@@ -69,7 +75,7 @@
                 </span>
             </div>
             <div>
-                {{ form.state }}
+               {{ form.state }}
                 <ul>
                 {% for val,label_text in form.registrationAuthorities.field.choices %}
                     <li>

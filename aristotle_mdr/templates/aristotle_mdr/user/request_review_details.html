@@ -10,9 +10,13 @@
           <li class="active">Request review details</li>
         </ol>
         <div class="alert alert-info">
-            Request status: 
+            Request status:
             {{review.get_status_display}}
+            <p>Request user   :
+            {{review.requester}}
+            </p>
         </div>
+
         <table class="table request_message">
             <tr>
                 <th>Request</th>

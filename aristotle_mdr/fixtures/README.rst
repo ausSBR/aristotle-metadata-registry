@@ -31,3 +31,9 @@ Update Index
 -------------
 sudo ./manage.py update_index
 sudo chown -R rick:rick whoosh_index/
+
+GIT Pull
+-------------
+sudo git clone https://github.com/ausSBR/aristotle-metadata-registry.git
+cd repository/
+git pull origin master

@@ -59,6 +59,7 @@ setup(
 
         # Fancy UI stuff
         'django-static-precompiler',
+        'autocomplete==0.0.104'
         'django-autocomplete-light==2.3.3',
         'django-bootstrap3',
         'django-bootstrap3-datetimepicker',

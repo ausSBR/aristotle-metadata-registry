@@ -18,7 +18,7 @@
         <table class="table">
             <thead>
                 <th>{% trans 'Date registration effective' %}</th>
-                <th>{% trans 'Date registration expires' %}</th>
+                <!--<th>{% trans 'Date registration expires' %}</th>    /   Removed until_date from models -->
                 <th>{% trans 'State' %}</th>
                 <th>Comments</th>
                 {% comment %}
@@ -31,7 +31,7 @@
             {% for status in states %}
                 <tr>
                     <td>{{ status.registrationDate }}</td>
-                    <td>{{ status.until_date }}</td>
+                    <!--<td>{{ status.until_date }}</td>    /   removed until_date from models -->
                     <td><a title='' href='{% url 'aristotle:registrationAuthority' ra.id %}#state_{{ status.state }}'>{{ status.state|stateToText }}</a></td>
                     <td>{{ status.changeDetails }}</td>
                 </tr>
